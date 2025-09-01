@@ -57,15 +57,18 @@ html, body {
 
 /* Hero section takes full viewport height */
 .hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100vh;
-  background-color: #111;
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
   padding: 0 40px 80px;
   box-sizing: border-box;
-  position: relative;
-  overflow: hidden;
+  pointer-events: none;
+  z-index: 2;
 }
 
 /* The overlay holds the project title/artist */
@@ -91,22 +94,20 @@ html, body {
 /* Slider area below hero */
 .slider {
   position: relative;
-  height: 80vh;
-  margin-top: 100px;
+  height: 100vh;    /* prend toute la hauteur de l’écran */
+  margin-top: 0;    /* on supprime l’espace au-dessus */
   overflow: hidden;
 }
-
 .slides {
   display: flex;
-  width: 400%; /* 4 slides * 100% */
-  height: 100%;
+  width: 400%;       /* 4 slides x 100% */
+  height: 100vh;     /* pleine hauteur */
   transition: transform 0.7s ease-in-out;
 }
-
 .slide {
   flex: 0 0 100%;
-  height: 100%;
-  background-size: cover;
+  height: 100vh;     /* pleine hauteur */
+  background-size: cover;   /* l’image couvre tout l’écran */
   background-position: center;
   position: relative;
   filter: brightness(80%);
