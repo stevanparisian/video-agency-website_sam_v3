@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Agency – Home</title>
+    <!-- Google Fonts for a slightly brutal, condensed feel -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+    <!-- Site styles -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">Video&nbsp;Agency</div>
+        <nav>
+            <ul>
+                <li><a href="#directors">Réalisateurs</a></li>
+                <li><a href="#films">Films + TV</a></li>
+                <li><a href="#photos">Photographes</a></li>
+                <li><a href="#music">Musique</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero section.  Title and artist change when you switch slides -->
+    <section class="hero" id="hero">
+        <div class="overlay">
+            <h1>Projet 1</h1>
+            <p>Artiste 1</p>
+        </div>
+    </section>
+
+    <!-- Slider of featured projects.  Each slide has data attributes for title and artist -->
+    <section class="slider" id="portfolio">
+        <div class="slides">
+            <!-- To change images, replace the URLs inside the inline styles below -->
+            <div class="slide active" data-title="Projet 1" data-artist="Artiste 1" style="background-image:url('images/project1.jpg')"></div>
+            <div class="slide" data-title="Projet 2" data-artist="Artiste 2" style="background-image:url('images/project2.jpg')"></div>
+            <div class="slide" data-title="Projet 3" data-artist="Artiste 3" style="background-image:url('images/project3.jpg')"></div>
+            <div class="slide" data-title="Projet 4" data-artist="Artiste 4" style="background-image:url('images/project4.jpg')"></div>
+        </div>
+        <!-- Numeric navigation similar to iconoclast.  Click to jump to a slide -->
+        <div class="nav-numbers">
+            <span data-index="0" class="active">1</span>
+            <span data-index="1">2</span>
+            <span data-index="2">3</span>
+            <span data-index="3">4</span>
+        </div>
+    </section>
+
+    <!-- Contact section -->
+    <section class="contact" id="contact">
+        <h2>Contact</h2>
+        <p>Pour toute demande de projet, envoyez‑nous un message à : <a href="mailto:contact@video-agency.com">contact@video-agency.com</a>.</p>
+    </section>
+
+    <!-- JavaScript for interactivity -->
+    <script src="script.js"></script>
+</body>
+</html>

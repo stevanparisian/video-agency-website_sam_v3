@@ -1,0 +1,160 @@
+/*
+ * Basic styling inspired by iconoclast.tv but with a punk/DIY twist.
+ * Dark backgrounds, white text, condensed headings and subtle transitions.
+ */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  background-color: #0a0a0a;
+  color: #eaeaea;
+  scroll-behavior: smooth;
+}
+
+/* Fixed navigation bar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+
+.logo {
+  font-family: 'Oswald', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 25px;
+}
+
+.navbar a {
+  color: #eaeaea;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.navbar a:hover {
+  opacity: 0.6;
+}
+
+/* Hero section takes full viewport height */
+.hero {
+  height: 100vh;
+  background-color: #111;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 0 40px 80px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+/* The overlay holds the project title/artist */
+.hero .overlay {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 4rem;
+  margin: 0;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-top: 10px;
+}
+
+/* Slider area below hero */
+.slider {
+  position: relative;
+  height: 80vh;
+  margin-top: 100px;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  width: 400%; /* 4 slides * 100% */
+  height: 100%;
+  transition: transform 0.7s ease-in-out;
+}
+
+.slide {
+  flex: 0 0 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  filter: brightness(80%);
+}
+
+/* Numeric navigation inspired by iconoclast */
+.nav-numbers {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 25px;
+  z-index: 3;
+}
+
+.nav-numbers span {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2rem;
+  cursor: pointer;
+  opacity: 0.4;
+  color: #888;
+  transition: opacity 0.3s, color 0.3s;
+}
+
+.nav-numbers span.active {
+  opacity: 1;
+  color: #ffffff;
+}
+
+/* Contact section */
+.contact {
+  padding: 80px 40px;
+  background-color: #111;
+}
+
+.contact h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.contact p, .contact a {
+  font-size: 1rem;
+  color: #bbb;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
